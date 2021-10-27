@@ -1,148 +1,138 @@
-function oneThroughTwenty(numero) {
-    
-   /* Your code goes below
-   Write a for or a while loop
-   return the result*/
-    let n=1
-          while(n<=numero) {
-          console.log(n)
-          n++}
-}
-oneThroughTwenty(20)
-//call function oneThroughTwenty
-
-
-function evensToTwenty(numero) {
+//------------------------------------------------------------
+//Função para listar números de 1 a 20
+function oneThroughTwenty() {
   let n=1
-  while(n<=numero) {
-    if (n%2==0){
-  console.log(n)}
-    n++}  
-  }
-  evensToTwenty(20)
-//call function evensToTwenty
+  let numero=[]
+  while(n<=20) {//loop para números de 1 a 20
+  numero.push(n)
+  n++}
+  return numero
+}
+console.log(oneThroughTwenty())//Imprimir os números
 
+//----------------------------------------------------------
+//Função para listar números pares de 1 a 20
+function evensToTwenty() {
+  let n=1
+  let numero=[]
+  while(n<=20) {//loop para números de 1 a 20
+  if (n%2==0){//Condição para ser número par
+  numero.push(n)}
+  n++}  
+  return numero  
+}
+  console.log(evensToTwenty())//Imprimir os números
+ 
+//---------------------------------------------------------
+  //Função para listar os números ímpares de 1 a 20
 function oddsToTwenty() {
   let n=1
-  while(n<=numero){
-  if (n%2!=0){
-  console.log(n)}
+  let numero=[]
+  while(n<=20){//loop para números de 1 a 20
+  if (n%2!=0){//Condição para ser número ímpar
+  numero.push(n)}
   n++}
+  return numero
   }
-  oddsToTwenty(20)
-  /* Your code goes below
-  Write a for or a while loop
-  return the result */
-   
-
-
-//call function oddsToTwenty
-
+  console.log(oddsToTwenty())//Imprimir os números
+ 
+  //--------------------------------------------------------
+//Função para retornar os múltiplos de 5 até 100
 function multiplesOfFive() {
   let n=5
-  while(n<=numero){
-  if (n%5==0){
-  console.log(n)}
+  let numero=[]
+  while(n<=100){//loop para números de 5 até 100
+  if (n%5==0){//Condição para ser múltiplo de 5
+  numero.push(n)}
   n++}
+  return numero
 }
-multiplesOfFive(100)
-  /* Your code goes below
-  Write a for or a while loop
-  return the result */
-
-
-
-//call function multiplesOfFive
-
+console.log(multiplesOfFive())//Imprimir os números
+ 
+//------------------------------------------------------------
+//Função os quadrados perfeitos dos números até 100
 function squareNumbers() {
     
- /* Your code goes below
-  Write a for or a while loop
-  return the result */
-      let n=1
-    while(n<=numero){
-    if (Math.sqrt(n)%1===0){
-    console.log(n)} 
-    n++
-    }  
+  let n=1
+  let numero=[]
+  while(n<=100){//loop para os números de 1 a 100
+  if (Math.sqrt(n)%1===0){//Condição para ser quadrado perfeito
+  numero.push(n)} 
+  n++}  
+  return numero
 }
 
-squareNumbers(100)
-//call function squareNumbers
+console.log(squareNumbers())//Imprimir os números
 
+//------------------------------------------------------
+//Função para retornar os números de 20 a 1
 function countingBackwards() {
     
-  /* Your code goes below
-  Write a for or a while loop
-  return the result */
-  let n=1
-while(numero>=n){
-console.log(numero)
-numero=numero-1}
+let n=20
+let numero=[]
+while(n>=1){//loop para os números de 20 a 1
+numero.push(n)
+n=n-1}
+return numero
 }
-countingBackwards(20)
-//call function countingBackwards
+console.log(countingBackwards())//Imprimir os números
 
+//--------------------------------------------------------
+//Função para retornar os números pares de 20 a 1
 function evenNumbersBackwards() {
-    
- /* Your code goes below
-  Write a for or a while loop
-  return the result */
-  let n=1
-while (numero>=n){
-if(numero%2==0){
-console.log(numero)}
-numero=numero-1
-}
-}
-evenNumbersBackwards(20)
 
-//call function evenNumbersBackwards
+let numero=[]
+let n=20
+while (n>=1){//Loop para os números de 20 a 1
+if(n%2==0){//Condição para números pares
+numero.push(n)}
+n=n-1}
+return numero
+}
+console.log(evenNumbersBackwards())//Imprimir os números
 
+//---------------------------------------------------------
+//Função para retornar os números ímpares de 20 a 1
 function oddNumbersBackwards() {
     
- /* Your code goes below
-  Write a for or a while loop
-  return the result */
-  let n=1
-  while (numero>=n){
-  if(numero%2!=0){
-  console.log(numero)}
-  numero=numero-1
-  }
+  let numero=[]
+  let n=20
+  while (n>=1){//loop para os números de 20 a 1
+  if(n%2!=0){//Condição para números ímpares
+  numero.push(n)}
+  n=n-1  }
+  return numero
 }
-oddNumbersBackwards(20)
+console.log(oddNumbersBackwards())//Imprimir os números
 
-//call function oddNumbersBackwards
+//---------------------------------------------------------
+/*Função para retornar os múltiplos de 5, 
+contando de trás para frente, começando do número 100*/
 
 function multiplesOfFiveBackwards() {
     
- /* Your code goes below
-  Write a for or a while loop
-  return the result */
-  let n=1
-  while (numero>=n){
-  if(numero%5==0){
-  console.log(numero)}
-  numero=numero-1
-  }
+  let numero=[]
+  let n=100
+  while (n>=1){//lopp para números de 100 a 1
+  if(n%5==0){//Condição para múltiplo de 5
+  numero.push(n)}
+  n=n-1  }
 }
-multiplesOfFiveBackwards(100)
+console.log(multiplesOfFiveBackwards())
 
-//call function multiplesOfFiveBackwards
-
+//---------------------------------------------------------
+/*Função para retornar os quadrados perfeitos de 
+trás para frente, começando no número 100*/
 function squareNumbersBackwards() {
     
-   /* Your code goes below
-  Write a for or a while loop
-  return the result */
-  let n=1
-  while (numero>=n){
-  if (Math.sqrt(numero)%1===0){
-    console.log(numero)} 
-    numero=numero-1
-  }
+  let numero=[]
+  let n=100
+  while (n>=1){//Loop para os números de 100 a 1
+  if (Math.sqrt(n)%1===0){
+  numero.push(n)} 
+  n=n-1  }
 }
-squareNumbersBackwards(100)
+console.log(squareNumbersBackwards())
 
-//call function squareNumbersBackwards
+//------------------------------------------------------------
+//Never give up!
